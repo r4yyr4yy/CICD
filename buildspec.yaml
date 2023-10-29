@@ -4,7 +4,7 @@ env:
   parameter-store:
     DOCKER_REGISTRY_USERNAME: /tourist-app/docker-credentials/username
     DOCKER_REGISTRY_PASSWORD: /tourist-app/docker-credentials/password
-    DOCKER_REGISTRY_URL: /tourist-app/docker-credentials/url/
+    DOCKER_REGISTRY_URL: /tourist-app/docker-credentials/url
 
 phases:
   install:
@@ -13,11 +13,11 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies..."
-      - pip install -r day-13/simple-python-app/requirements.txt
+      - pip install -r CICD/requirements.txt
   build:
     commands:
-      - echo "Running tests..."
-      - cd CICD/PROJECT-1/
+      - echo "building phase..."
+      - cd CICD/
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/tourist-app:latest" .
@@ -28,4 +28,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: ../PROJECT-1
+  base-directory: ../CICD

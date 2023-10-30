@@ -18,8 +18,8 @@ phases:
       - echo "building phase..."
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
-      - docker build -t "docker.io/$DOCKER_REGISTRY_USERNAME/tourist-app:latest" .
-      - docker push "docker.io/$DOCKER_REGISTRY_USERNAME/tourist-app:latest"
+      - docker build -t "$DOCKER_REGISTRY_USERNAME/tourist-app:latest" .
+      - docker push "$DOCKER_REGISTRY_USERNAME/tourist-app:latest"
   post_build:
     commands:
       - echo "Hurray build successful!"

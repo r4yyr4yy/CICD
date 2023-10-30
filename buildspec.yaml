@@ -15,12 +15,12 @@ phases:
       - pip install -r requirements.txt
   build:
     commands:
-      - echo "building phase..."
+      - echo "starting to build..."
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin
       - docker build -t "raymondokudzeto/tourist-app:latest" .
       - docker push "raymondokudzeto/tourist-app:latest"
   post_build:
     commands:
-      - echo "Hurray build successful!"
+      - echo "Hurray !!! build successful!"
 

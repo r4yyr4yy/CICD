@@ -1,12 +1,12 @@
-#! /bin/bash
+#!/bin/bash
 set -e
 
-# Pull the Docker image from Docker hub
+# Pull the Docker image from Docker Hub
 
-echo "Pull Docker iamge from Docker hub"
+echo "Pull Docker image from Docker Hub"
 
 docker pull raymondokudzeto/tourist-app
 
 # Run the Docker image as a container
 
-docker run  -d  -p 5000:5000 raymondokudzeto/tourist-app
+docker run -d -p 5000:5000 raymondokudzeto/tourist-app

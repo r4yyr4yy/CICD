@@ -1,6 +1,9 @@
 version: 0.0
 os: linux
 
+files:
+  - source: https://github.com/r4yyr4yy/CICD/start_container.sh
+  
 hooks:
   ApplicationStop:
     - location: stop_container.sh

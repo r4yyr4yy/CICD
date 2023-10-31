@@ -3,8 +3,8 @@ set -e
 
 # stop the running container (if any)
 
-# containerid= â€˜docker ps | awk -f â€œ â€œ â€˜{print $1}â€™ â€˜
+containerid='docker ps | awk -F " " '{print $1}''
 
-# docker rm  -f $containerid
+docker rm  -f $containerid
 
 echo "Stopping ... "

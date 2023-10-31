@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: https://github.com/r4yyr4yy/CICD/start_container.sh
+  - source: https://github.com/r4yyr4yy/CICD/blob/main/start_container.sh
     destination: /opt/codedeploy-agent/deployment-root/start_container.sh
     permission: +x
 

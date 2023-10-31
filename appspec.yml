@@ -2,6 +2,10 @@ version: 0.0
 os: linux
 
 hooks:
+  ApplicationStop:
+    -	location: stop.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: start.sh
       timeout: 300

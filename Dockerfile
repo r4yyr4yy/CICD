@@ -20,4 +20,4 @@ EXPOSE 5000
 # ENV MY_ENV_VAR=value
 
 # Run the Flask application
-CMD ["python", "tourist-app.py"]
+CMD ["python3", "tourist-app.py"]

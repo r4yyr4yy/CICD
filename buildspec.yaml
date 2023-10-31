@@ -23,4 +23,7 @@ phases:
   post_build:
     commands:
       - echo "Hurray !!! build successful!"
-
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ../CICD

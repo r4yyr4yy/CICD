@@ -9,4 +9,4 @@ docker pull raymondokudzeto/tourist-app
 
 # Running the Docker image as a container
 
-docker run -d -p 5000:5000 raymondokudzeto/tourist-app
+docker run -d -p5000:5000 raymondokudzeto/tourist-app
